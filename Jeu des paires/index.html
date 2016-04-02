@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Jeu des paires</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <audio id="audioPlayer">
+        <source src="sounds/pokemon.mp3" />
+  </audio>
+
+  <img src="img/sonon.png" alt="son" class="control" onclick="play('audioPlayer', this)">
+
+  <aside>
+
+    <img class="artikodin" src="img/artikodin.gif" alt="">
+
+    <h1>
+
+      <span class="h1"><i class="fa fa-star"> </i></span>
+
+      <span class="h1">J</span><span class="h1">e</span><span class="h1-espace">u</span>
+
+      <span class="h1">d</span><span class="h1">e</span><span class="h1-espace">s</span>
+
+      <span class="h1">p</span><span class="h1">a</span><span class="h1">i</span><span class="h1">r</span><span class="h1">e</span><span class="h1-espace">s</span>
+
+<span class="h1"><i class="fa fa-star"> </i></span>
+
+    </h1>
+
+  </aside>
+
+
+  <p id="temps"><button onclick="alea();chronometre()">Commencer</button></p>
+
+  <img id="dracaufeu" src="img/dracaufeu.gif" alt="dracaufeu">
+
+  <section class="principale">
+    <div class="cache" onclick="retourner(this)"><img src="img/doscarte.jpg" alt=""></div>
+    <div class="cache" onclick="retourner(this)"><img src="img/doscarte.jpg" alt=""></div>
+    <div class="cache" onclick="retourner(this)"><img src="img/doscarte.jpg" alt=""></div>
+    <div class="cache" onclick="retourner(this)"><img src="img/doscarte.jpg" alt=""></div>
+    <div class="cache" onclick="retourner(this)"><img src="img/doscarte.jpg" alt=""></div>
+    <div class="cache" onclick="retourner(this)"><img src="img/doscarte.jpg" alt=""></div>
+    <div class="cache" onclick="retourner(this)"><img src="img/doscarte.jpg" alt=""></div>
+    <div class="cache" onclick="retourner(this)"><img src="img/doscarte.jpg" alt=""></div>
+    <div class="cache" onclick="retourner(this)"><img src="img/doscarte.jpg" alt=""></div>
+    <div class="cache" onclick="retourner(this)"><img src="img/doscarte.jpg" alt=""></div>
+    <div class="cache" onclick="retourner(this)"><img src="img/doscarte.jpg" alt=""></div>
+    <div class="cache" onclick="retourner(this)"><img src="img/doscarte.jpg" alt=""></div>
+    <div class="cache" onclick="retourner(this)"><img src="img/doscarte.jpg" alt=""></div>
+    <div class="cache" onclick="retourner(this)"><img src="img/doscarte.jpg" alt=""></div>
+  </section>
+
+  <article>
+
+    <img id="team" src="img/team.gif" alt="team">
+
+  </article>
+
+  <footer>
+    Crée par Mathieu, David, Ashvin
+  </footer>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
