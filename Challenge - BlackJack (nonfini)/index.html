@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Black Jack</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+
+        <h1>Black Jack</h1>
+        <p>
+          Nous allons un réaliser un petit Black Jack dans notre navigateur internet à l'aide des boites de dialogues.<br>
+          Je vous ai déjà préparé ce fichier <em>index.html</em> lié au javascript <em>app.js</em> (qui se trouve dans le répertoire <em>js</em>).<br>
+          Vous pouvez commencer à rentrer vos codes javascript dans le fichier <em>app.js</em>
+        </p>
+
+        <h2>Règles :
+        </h2>
+        <p>
+          La partie oppose un joueur contre la banque. Le but est de battre le croupier sans dépasser 21. Dès qu'un joueur fait plus que 21 il a perdu. La valeur des cartes est établie comme suit :
+          <ul>
+            <li>de 2 à 9 → valeur nominale de la carte</li>
+            <li>chaque figure + le 10 → 10 points</li>
+            <li>l'As → 1 ou 11 (au choix)</li>
+          </ul>
+        </p>
+        <h2>Déroulement du jeu</h2>
+        <ul>
+          <li>1. L'utilisateur clique sur bouton "commencer" pour lancer le jeu</li>
+          <li>2. Le jeu affiche une boite de message lui indiquant les cartes qu'il a reçu sous forme de texte (ex: 8 de coeur ou Roi de carreaux). Ces cartes sont déterminées de façon aléatoire.</li>
+          <li>3. Le jeu lui propose soit de continuer, soit de s'arrêter là</li>
+          <li>4. Si le joueur décide de continuer le jeu lui donne une autre carte</li>
+          <li>5. Si le total des cartes du joueur dépasse 21 alors il a perdu</li>
+          <li>6. Si le total ne dépasse pas 21 il demande de nouveau au joueur s'il veut continuer</li>
+          <li>Si le joueur atteint 21 alors le jeu affiche gagné</li>
+        </ul>
+
+        <blockquote>
+          <h4>Contraintes :</h4>
+          <p>
+            Vous devez utiliser les tableaux et au moins une fonction (autre que la fonction <em>commencer</em> déjà présente)
+          </p>
+        </blockquote>
+        <p>
+          Vous pouvez ajouter autant de fonctionnalités que vous estimez nécessaires pour rendre le jeu plus conviviale.
+          Vous pouvez utiliser des frameworks si ça vous dit.
+        </p>
+
+        <h3>Bonus</h3>
+        <p>
+          Jusqu'ici il n'y avait qu'un seul joueur qui pouvait jouer (normalement). Vous devez maintenant permettre à 2 joueurs de jouer sur la même page.
+          Ils joueront chacun son tour. Le premier sera identifié comme la banque. <br>
+        </p>
+        <ul>
+          <li>Si le nombre de point du joueur dépasse le nombre de point de la banque (sans dépassé 21) alors il a gagné sinon il a perdu</li>
+          <li>Si la banque dépasse 21 le joueur a automatiquement gagné</li>
+        </ul>
+        <blockquote>
+          Je vous conseille fortemement de commencer à utiliser git...
+        </blockquote>
+
+
+        <div class="center-block btn-container">
+
+          <button type="button" onclick="commencer()" class="btn btn-lg btn-danger btn-block">Commencer</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.js" charset="utf-8"></script>
+  </body>
+</html>
