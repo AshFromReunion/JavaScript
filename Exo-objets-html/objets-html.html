@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Les Objets HTML</title>
+
+<style media="screen">
+#chat1 {
+border: 3px solid red;
+}
+#chat2 {
+border: 3px solid blue;
+}
+img {
+width: 400px;
+display: block;
+margin: 10px 0;
+}
+.zone-survole {
+width: 200px;
+height: 200px;
+background-color: green;
+color: white;
+line-height: 200px;
+text-align: center;
+margin: 20px 0;
+display: inline-block;
+}
+
+</style>
+</head>
+<body>
+<h1 onmouseover="style='color:red';" onmouseout="style='color:black';">Les Objets HTML</h1>
+<p  onmousemove="style='font-weight:bold';" onmouseout="style='font-weight:light';">
+Ce tutoriel a pour but de vous initier aux objets HTML et leurs utilisations.<br>
+Retrouvez l'énoncé sur
+<a href="http://simplonline.co/dashboard/consignes/86-consignes-reunion/438-initiation-a-l-utilisation-du-dom" target="_blank" onClick="alert('Super ! On va sur simplonline !!! lien : http://simplonline.co/dashboard/consignes/86-consignes-reunion/438-initiation-a-l-utilisation-du-dom');">
+simplonline</a>.
+</p>
+<h1>Exercices</h1>
+<p>
+Ma souris survole : <b id="details-survole"></b>
+</p>
+
+
+<img src="img/chat1.jpg" alt="Chat 1" id="chat1" onmouseover="getElementById('details-survole').innerHTML= this.id"; onmouseout="getElementById('details-survole').innerHTML=' ';"/>
+<img src="img/chat2.jpg" alt="Chat 2" id="chat2" onmouseover="getElementById('details-survole').innerHTML= this.id"; onmouseout="getElementById('details-survole').innerHTML=' ';"/>
+
+<button type="button" id="btn-click">Cliquez</button>
+
+<h2>L'utilisateur a rentré au clavier</h2>
+
+<input type="text" id="form" placeholder="Entrer votre texte" onKeyUp="getElementById('keyboard').innerHTML = this.value; getElementById('keyboard2').innerHTML = this.value;"/>
+
+<h1 id="keyboard"></h1>
+<p id="keyboard2"><p>
+
+<button type="button" onclick="getElementById('form').value = ''; getElementById('keyboard').innerHTML = ''; getElementById('keyboard2').innerHTML = '';">Vider la zone de saisie</button>
+
+<div>
+<div class="zone-survole" ondblclick="getElementById('double-clic').innerHTML += this.innerText + ' ';">
+Zone 1
+</div>
+<div class="zone-survole" ondblclick="getElementById('double-clic').innerHTML += this.innerText + ' ';">
+Zone 2
+</div>
+<div class="zone-survole" ondblclick="getElementById('double-clic').innerHTML += this.innerText + ' ';">
+Zone 3
+</div>
+</div>
+<p id="double-clic">
+
+</p>
+
+<script type="text/javascript">
+
+function changer_images()
+{
+var image1 = document.getElementById("chat1").src;
+var image2 = document.getElementById("chat2").src;
+
+document.getElementById("chat2").src = image1;
+document.getElementById("chat1").src = image2;
+}
+document.getElementById("btn-click").onclick = changer_images;
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Les Objets HTML</title>
+
+  <style media="screen">
+  #chat1 {
+    border: 3px solid red;
+  }
+  #chat2 {
+    border: 3px solid blue;
+  }
+  img {
+    width: 400px;
+    display: block;
+    margin: 10px 0;
+  }
+  .zone-survole {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    color: white;
+    line-height: 200px;
+    text-align: center;
+    margin: 20px 0;
+    display: inline-block;
+  }
+
+  </style>
+</head>
+<body>
+  <h1 onmouseover="style='color:red';" onmouseout="style='color:black';">Les Objets HTML</h1>
+  <p  onmousemove="style='font-weight:bold';" onmouseout="style='font-weight:light';">
+    Ce tutoriel a pour but de vous initier aux objets HTML et leurs utilisations.<br>
+    Retrouvez l'énoncé sur
+    <a href="http://simplonline.co/dashboard/consignes/86-consignes-reunion/438-initiation-a-l-utilisation-du-dom" target="_blank" onClick="alert('Super ! On va sur simplonline !!! lien : http://simplonline.co/dashboard/consignes/86-consignes-reunion/438-initiation-a-l-utilisation-du-dom');">
+      simplonline</a>.
+    </p>
+    <h1>Exercices</h1>
+    <p>
+      Ma souris survole : <b id="details-survole"></b>
+    </p>
+
+
+    <img src="img/chat1.jpg" alt="Chat 1" id="chat1" onmouseover="getElementById('details-survole').innerHTML= this.id"; onmouseout="getElementById('details-survole').innerHTML=' ';"/>
+    <img src="img/chat2.jpg" alt="Chat 2" id="chat2" onmouseover="getElementById('details-survole').innerHTML= this.id"; onmouseout="getElementById('details-survole').innerHTML=' ';"/>
+
+    <button type="button" id="btn-click">Cliquez</button>
+
+    <h2>L'utilisateur a rentré au clavier</h2>
+
+    <input type="text" id="form" placeholder="Entrer votre texte"/>
+
+    <h1 class="keyboard"></h1>
+    <p class="keyboard"><p>
+
+      <button type="button" onclick="getElementById('form').value = ''; getElementById('keyboard').innerHTML = '';">Vider la zone de saisie</button>
+
+      <div>
+        <div class="zone-survole" ondblclick="getElementById('double-clic').innerHTML += this.innerText + ' ';">
+          Zone 1
+        </div>
+        <div class="zone-survole" ondblclick="getElementById('double-clic').innerHTML += this.innerText + ' ';">
+          Zone 2
+        </div>
+        <div class="zone-survole" ondblclick="getElementById('double-clic').innerHTML += this.innerText + ' ';">
+          Zone 3
+        </div>
+      </div>
+      <p id="double-clic">
+
+      </p>
+
+      <script type="text/javascript">
+
+      function changer_images()
+      {
+        var image1 = document.getElementById("chat1").src;
+        var image2 = document.getElementById("chat2").src;
+
+        document.getElementById("chat2").src = image1;
+        document.getElementById("chat1").src = image2;
+      }
+      document.getElementById("btn-click").onclick = changer_images;
+
+
+      function class_keyboard()
+      {
+        var key = document.getElementsByClassName('keyboard');
+        for(var i = 0; i < key.length; i++) {
+          key[i] =  ;
+        }
+      }
+      document.getElementsByClassName('keyboard').onKeyUp = class_keyboard;
+
+      </script>
+    </body>
+    </html> -->
