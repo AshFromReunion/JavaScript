@@ -1,0 +1,25 @@
+.cacher {
+    visibility: hidden;
+}
+
+.visibl {
+    visibility: visible;
+}
+
+body {
+    text-align: center;
+    background-color: #CCC;
+    font-family: "Arial";
+}
+
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 200px;
+}
+
+.inline {
+    display: inline-block;
+}
